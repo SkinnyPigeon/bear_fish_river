@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import {Component} from 'react';
 
 export default class Bear extends Component {
     constructor(props) {
@@ -36,12 +36,4 @@ export default class Bear extends Component {
             console.log("No fish, sad bear")
         }
     }
-
-    // render(){
-    //     return (
-    //         <div>
-    //             <button onClick={this.eatsAFish}>Add fish to bear</button>
-    //         </div>
-    //     );
-    // }
 }
