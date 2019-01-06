@@ -8,7 +8,6 @@ export default class Bear extends Component {
         this.eatsAFish = this.eatsAFish.bind(this);
 
         this.state = {
-            alive: true,
             fish: []
         }
     }
@@ -22,9 +21,9 @@ export default class Bear extends Component {
         return "Rarrw"
     }
 
-    fishCheck() {
-        console.log(this.props.fishCount)
-        if (this.props.fishCount > 0) return true;
+    fishCheck(fishCount) {
+        console.log(fishCount)
+        if (fishCount > 0) return true;
     }
 
     eatsAFish(freshFish) {
@@ -38,11 +37,11 @@ export default class Bear extends Component {
         }
     }
 
-    render(){
-        return (
-            <div>
-                <button onClick={this.eatsAFish}>Add fish to bear</button>
-            </div>
-        );
-    }
+    // render(){
+    //     return (
+    //         <div>
+    //             <button onClick={this.eatsAFish}>Add fish to bear</button>
+    //         </div>
+    //     );
+    // }
 }
