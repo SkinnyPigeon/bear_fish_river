@@ -54,8 +54,7 @@ export default class River extends Component {
         if(readyToEat && readyToHunt) {
             let grabbedFish = this.state.fish.pop();
             grabbedFish.state.alive = false;
-            console.log(grabbedFish)
-            this.state.bears[whichBear].state.fish.push();
+            this.state.bears[whichBear].state.fish.push(grabbedFish);
             console.log("Yum yum, happy bear")
             console.log(this.state)
         } else if (readyToEat && !readyToHunt) {
