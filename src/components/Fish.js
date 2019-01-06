@@ -11,5 +11,11 @@ export default class Fish extends Component {
 
     hasBeenEaten() {
         this.setState({alive: false})
+        return this.state;
+    }
+
+    sayHello() {
+        console.log("Hello")
+        return "Hello"
     }
 }
