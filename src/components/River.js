@@ -42,6 +42,7 @@ export default class River extends Component {
             <div>
                 <button onClick={this.addFishToWater}>Add fish to water</button>
                 <button onClick={this.addBearToWater}>Add bear to water</button>
+                <Bear fishCount={this.state.fish.length}></Bear>
             </div>
         );
     }
