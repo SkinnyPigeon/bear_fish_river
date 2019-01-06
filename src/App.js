@@ -26,8 +26,6 @@ class App extends Component {
         <Header appName={this.state.applicationName}/>
         <Container>
           <River buttonID="riverButton"></River>
-          {/* <ActionButton buttonID={"This is my ID"}></ActionButton> */}
-          {/* <ActionButton buttonID={"This is another ID"}></ActionButton> */}
         </Container>
       </div>
     );

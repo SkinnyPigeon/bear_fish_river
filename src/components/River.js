@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import Fish from './Fish';
-import ActionButton from './ActionButton';
 
 export default class River extends Component {
     constructor(props) {
         super(props);
+
+        this.addFishToWater = this.addFishToWater.bind(this);
 
         this.state = {
             fish: [],
@@ -12,23 +13,21 @@ export default class River extends Component {
         } 
     }
 
-    componentDidMount() {
-        let riverButton = new ActionButton({buttonID: "river", getsClicked: this.addFishToWater});
-        console.log("HERE: ", riverButton)
-        this.setState({button: riverButton})
-        return riverButton;
-    }
-
     addFishToWater() {
         let newFish = new Fish();
         newFish.sayHello();
-        this.setState(this.state.fish.push(newFish));
+
+        this.state.fish.push(newFish);
+        this.state.fish.forEach(function(oneFish) {
+            console.log(oneFish.sayHello())
+        })
         console.log(this.state.fish)
+
     }
 
     render(){
         return (
-            <button onClick={this.addFishToWater}/>
+            <button onClick={this.addFishToWater}>Add fish to water</button>
         );
     }
 }

@@ -15,7 +15,6 @@ export default class Fish extends Component {
     }
 
     sayHello() {
-        console.log("Hello")
         return "Hello"
     }
 }
