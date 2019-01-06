@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 import {Container} from 'reactstrap';
 import Header from './components/Header';
 
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      applicationName = 'Bear River Fish'
+      applicationName: 'Bear River Fish'
     }
   }
 
@@ -19,7 +18,7 @@ class App extends Component {
       <div>
         <Header appName={this.state.applicationName}/>
         <Container>
-          
+
         </Container>
       </div>
     );
