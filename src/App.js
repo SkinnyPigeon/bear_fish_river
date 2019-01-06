@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Container} from 'reactstrap';
 import Header from './components/Header';
 
-import River from './components/River';
+import Forest from './components/Forest';
 
 import './App.css';
 
@@ -14,17 +14,12 @@ class App extends Component {
     }
   }
 
-  initialize() {
-    let river = new River()
-    console.log(river)
-  }
-
   render() {
     return (
       <div>
         <Header appName={this.state.applicationName}/>
         <Container>
-          <River buttonID="riverButton"></River>
+          <Forest />
         </Container>
       </div>
     );
