@@ -5,21 +5,29 @@ export default class AtionButton extends Component {
     constructor(props) {
         super(props);
 
+        this.toggle = this.toggle.bind(this);
         this.state = {
-            clicked: false,
-            id: this.props.id
-        } 
+            isOpen: false,
+            buttonID: this.props.buttonID,
+            getsClicked: this.props.getsClicked
+        }
     }
 
-    initalize() {
-        console.log(this.state.id)
+    toggle() {
+        this.setState({
+            isOpen: !this.state.isOpen
+        })
+        console.log(this.state)
+    }
+
+    componentDidMount() {
+        console.log(this.state)
     }
 
     render() {
-        console.log(this.state.id)
     return (
       <div>
-          <Button />
+          <Button onClick={this.toggle}/>
       </div>
     );
   }

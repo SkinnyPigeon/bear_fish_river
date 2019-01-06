@@ -7,25 +7,28 @@ export default class River extends Component {
         super(props);
 
         this.state = {
-            fish: []
+            fish: [],
+            button: null,
         } 
     }
 
-    initialize() {
-        let riverButton = new ActionButton({id: "riverButton"});
-        console.log(riverButton)
-        return riverButton
+    componentDidMount() {
+        let riverButton = new ActionButton({buttonID: "river", getsClicked: this.addFishToWater});
+        console.log("HERE: ", riverButton)
+        this.setState({button: riverButton})
+        return riverButton;
     }
 
-    // addFishToWater = function() {
-    //     let newFish = new Fish();
-    //     newFish.sayHello();
-    //     this.state.fish.push(newFish);
-    //     console.log(this.state.fish)
-    // }
+    addFishToWater() {
+        let newFish = new Fish();
+        newFish.sayHello();
+        this.setState(this.state.fish.push(newFish));
+        console.log(this.state.fish)
+    }
+
     render(){
         return (
-            <div></div>
+            <button onClick={this.addFishToWater}/>
         );
     }
 }
